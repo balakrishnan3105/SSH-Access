@@ -1,0 +1,15 @@
+- name: add a new user
+  user:
+    name: "{{ user_name1 }}"
+    comment: "{{ user_loc }}"
+    shell: /bin/bash
+  tags:
+    - add
+    
+ - name: grant SSH access
+   authorized_key:
+     user: "{{ user_name1 }}"
+     state: present
+     key: "{{ lookup('file', '../../../sshkeys/{{ user_name1 }}/id_rsa.pub') }}"
+   tags:
+    - grant

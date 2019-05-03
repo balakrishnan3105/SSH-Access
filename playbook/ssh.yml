@@ -1,0 +1,7 @@
+- hosts : ServerInstances
+  gather_facts: False
+  remote_user: admin_user
+  become: true
+  become_user: root
+  roles:
+    - ssh-access

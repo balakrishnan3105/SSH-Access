@@ -1,0 +1,9 @@
+[ServerInstances]
+ServerInstance1
+ServerInstance2
+ServerInstance3
+ServerInstance4
+
+[ServerInstances:vars]
+user_name1=Dev1
+user_loc="Dev Users"
